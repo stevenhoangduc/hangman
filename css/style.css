@@ -1,0 +1,44 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("/images/background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.container {
+    width: 850px;
+    background: white;
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+
+.hangman-box img {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.word-display {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+.word-display .letter {
+    width: 28px;
+    margin-bottom: 40px;
+    border-bottom: 3px black;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
