@@ -17,7 +17,7 @@ const wordList = [
     },
     {
         word: "castle",
-        hint: "A large building where kinds and queens live."
+        hint: "A large building where king and queens live."
     },
     {
         word: "elephant",
@@ -40,10 +40,6 @@ const wordList = [
         hint: "Reflects your image when you look at it."
     },
     {
-        word: "graduation",
-        hint: "What happens after you finish school or college?"
-    },
-    {
         word: "jungle",
         hint: "A dense forest with wild animals."
     },
@@ -53,7 +49,7 @@ const wordList = [
     },
     {
         word: "dragon",
-        hint: "A mythical creature taht breathes fire."
+        hint: "A mythical creature that breathes fire."
     },
     {
         word: "basket",
@@ -61,10 +57,10 @@ const wordList = [
     },
     {
         word: "island",
-        hint: "Land surrounded by water on all slides."
+        hint: "Land surrounded by water on all sides."
     },
     {
-        word: "Volcano",
+        word: "volcano",
         hint: "A mountain that erupts with lava and smoke."
     },
     {

@@ -21,7 +21,7 @@ const getRandomWord = () => {
 
 const gameOver = (isVictory) => {
     setTimeout(() => {
-        const modalText = isVictory === "win" ? `You got it:` :`The answer was:`;
+        const modalText = isVictory === "win" ? `You did it:` :`The answer was:`;
         gameModal.querySelector(".img")
         gameModal.classList.add("show");
 
