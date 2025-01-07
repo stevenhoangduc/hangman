@@ -119,10 +119,12 @@ body {
     align-items: center;
     justify-content: center;
     position: fixed;
+    pointer-events: none;
+    padding: 20px;
     transition: opacity 0.4s ease;
     opacity: 0;
-    pointer-events: none;
-    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -134,6 +136,7 @@ body {
 .game-modal.show {
     opacity: 1;
     pointer-events: auto;
+    display: block;
    
 }
 .game-modal .content {

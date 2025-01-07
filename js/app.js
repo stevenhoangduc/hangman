@@ -21,11 +21,23 @@ const getRandomWord = () => {
 
 const gameOver = (isVictory) => {
     setTimeout(() => {
-        const modalText = isVictory === "win" ? `You did it:` :`The answer was:`;
-        gameModal.querySelector(".img")
+       const modalTitle = gameModal.querySelector(".result-title");
+       const modalMessage = gameModal.querySelector(".result-message b");
+       const resultGif = gameModal.querySelector(".result-gif");
+       
+       if (isVictory === "win") {
+    
+        modalTitle.innerText = "You win!";
+        resultGif.src = "images/win.gif";
+       }else {
+        modalTitle.innerText = "You lose!"
+        resultGif.src = "images/lost.gif";
+       }
+
+       modalMessage.innerText = currentWord;
         gameModal.classList.add("show");
 
-    }, 300);
+    }, 0.3);
 }
 
 const initGame = (button, clickedLetter) => {
