@@ -1,3 +1,4 @@
+const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
 const lettersGuess= document.querySelector("letters-guess b");
 const keyboardDiv = document.querySelector(".keyboard");
@@ -25,9 +26,11 @@ const initGame = (button, clickedLetter) => {
             }
         })
     }else {
+        // If clicked letter doesn't exist then update the wrongGuessCount and hangman image
         wrongGuessCount++;
+        hangmanImage.src = `images/hangman-{wrongGuessCount}.svg`;
     }
-    
+    lettersGuess.innerText = `${wrongGuessCount} / ${maxGuesses}`;
    
 }
 
