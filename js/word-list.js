@@ -1,4 +1,4 @@
-const wordlist = [
+const wordList = [
     {
         word: "graduation",
         hint: "What happens after you finish school or college?"

@@ -1,3 +1,5 @@
+
+
 const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
 const lettersGuess= document.querySelector("letters-guess b");
@@ -30,6 +32,7 @@ const initGame = (button, clickedLetter) => {
         wrongGuessCount++;
         hangmanImage.src = `images/hangman-{wrongGuessCount}.svg`;
     }
+    button.disabled = true;
     lettersGuess.innerText = `${wrongGuessCount} / ${maxGuesses}`;
    
 }
@@ -39,7 +42,7 @@ for (let i = 97; i <= 122; i++) {
     const button = document.createElement("button");
     button.innerText = String.fromCharCode(i);
     keyboardDiv.appendChild(button);
-    bottom.addEventListener("click", e => initGame(e.target, String.fromCharCode(i)));
+    button.addEventListener("click", e => initGame(e.target, String.fromCharCode(i)));
 }
 
 getRandomWord();
