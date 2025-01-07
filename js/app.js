@@ -1,18 +1,34 @@
-
-
 const wordDisplay = document.querySelector(".word-display");
+const lettersGuess= document.querySelector("letters-guess b");
 const keyboardDiv = document.querySelector(".keyboard");
+
+let currentWord, wrongGuessCount = 0;
+const maxGuesses = 6;
 
 const getRandomWord = () => {
     // Selecting a random word and hint from the wordList
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
+    currentWord = word;
     console.log(word);
     document.querySelector(".hint-text b").innerText = hint;
     wordDisplay.innerHTML = word.split("").map(() => `<li class="letter"></li>`).join("");
 }
 
 const initGame = (button, clickedLetter) => {
-    console.log(button, clickedLetter);
+    // Checking if clickedLetter is exist on the currentWord
+    if(currentWord.includes(clickedLetter)) {
+        // Showing all correct letters on the word display
+        [...currentWord].forEach((letter, index) => {
+            if(letter === clickedLetter) {
+                wordDisplay.querySelectorAll("li")[index].innerText = letter;
+                wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
+            }
+        })
+    }else {
+        wrongGuessCount++;
+    }
+    
+   
 }
 
 // Creating keyboard buttons and adding event listeners
