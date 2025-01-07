@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Old School Hangman Game</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/word-list.js" defer></script>
     <script src="./js/app.js" defer></script>
 
 
-</head>
+    
+   </head>
 <body>
     <div class="game-modal">
         <div class="content">
@@ -25,14 +27,7 @@
             <h1>Old School Hangman Game</h1>
         </div>
         <div class="game-box"> 
-            <ul class="word-display"> 
-                <li class="letter guessed">s</li> 
-                <li class="letter guessed"></li>
-                <li class="letter guessed"></li>
-                <li class="letter guessed"></li>
-                <li class="letter guessed"></li>
-                <li class="letter guessed"></li>
-            </ul>
+            <ul class="word-display"></ul>
             <h2 class="hint-text">
                 Hint: 
                 <b>hint hint</b>
@@ -44,6 +39,6 @@
             <div class="keyboard"></div>
         </div>
 
-        <p class="hidden-word-text">Guess the hidden word</p>
+       
 </body>
 </html>
