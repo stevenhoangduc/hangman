@@ -4,10 +4,10 @@ const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
 const lettersGuess= document.querySelector(".letters-guess");
 const keyboardDiv = document.querySelector(".keyboard");
-const gameModal = document.querySelector(".gameModal");
+const gameModal = document.querySelector(".game-modal");
 
 
-let currentWord, correctLetters = [], wrongGuessCount = 0;
+let currentWord, correctLetters = [], wrongGuessCount = 0, isVictory = false
 const maxGuesses = 6;
 
 const getRandomWord = () => {
@@ -21,6 +21,8 @@ const getRandomWord = () => {
 
 const gameOver = (isVictory) => {
     setTimeout(() => {
+        const modalText = isVictory === "win" ? `You got it:` :`The answer was:`;
+        gameModal.querySelector(".img")
         gameModal.classList.add("show");
 
     }, 300);
@@ -39,6 +41,10 @@ const initGame = (button, clickedLetter) => {
         })
     }else {
         // If clicked letter doesn't exist then update the wrongGuessCount and hangman image
+        if (wrongGuessCount >= 6 ) {
+            
+            return gameOver("lose")
+        } 
         wrongGuessCount++;
         hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
     }
