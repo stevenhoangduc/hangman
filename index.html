@@ -6,7 +6,7 @@
     <title>Old School Hangman Game</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/word-list.js" defer></script>
-    <script src="./js/app.js" defer></script>
+    <script src="./js/app.js" defer></script> 
    
 
     
@@ -15,9 +15,9 @@
     <div class="game-modal">
         <div class="content">
             <img src="images/lost.gif" alt="gif">
-            <h2>You Lose! </h2>
-            <p>The Correct word was: <b>graduation</b></p>
-            <button class="new-game">New Game</button>
+            <h2></h2>
+            <p You loose >The Correct word was: <b>graduation</b></p>
+            <button onclick="location.reload()">New Game</button>
         </div>
 
     </div>
@@ -32,9 +32,9 @@
                 Hint: 
                 <b>hint hint</b>
             </h2>
-            <h2 class="letters-guess">
+            <h2>
                 Wrong guesses: 
-                <b>0 / 6</b>
+                <p class="letters-guess"> 0 / 6 </p>
             </h2>
             <div class="keyboard"></div>
         </div>

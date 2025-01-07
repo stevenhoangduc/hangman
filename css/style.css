@@ -1,6 +1,7 @@
 
 body {
-    
+    margin: 0;
+    flex-direction: column;
     background-image: url("/images/background.gif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,7 +25,8 @@ body {
 }
 
 .hangman-box img {
-   max-width: 270px;
+   max-width: 100%;
+   height: auto;
 
 }
 
@@ -42,6 +44,7 @@ body {
     list-style: none;
     align-items: center;
     justify-content: center;
+   
    
 }
 
@@ -89,7 +92,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     border-radius: 4px;
-    background: rgb(240, 216, 216);
+    background: rgb(148, 12, 12);
     font-size: 1rem;
     font-weight: 600;
     color: rgb(228, 68, 76);
@@ -98,19 +101,28 @@ body {
 }
 
 .keyboard button {
-    padding: 10px;
+    padding: 7px;
     width: calc(100% / 9 - 5px);
 }
 
+.keyboard button[disabled] {
+    opacity: 0.7;
+    pointer-events: none;
+
+}
 :where(.game-modal, .keyboard) button:hover {
     background: white;
 }
 
 .game-modal {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
@@ -119,7 +131,11 @@ body {
 
 
 }
-
+.game-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+   
+}
 .game-modal .content {
     text-align: center;
     border-radius: 10px;
@@ -152,7 +168,13 @@ game-modal h2 {
     padding: 12px 23px;
 }
 
-@media (max-width: 782px) {
+@media screen and (max-width: 768px) {
+  
+    button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    
     .container {
         flex-direction: column;
         padding: 30px 15px;
@@ -166,7 +188,18 @@ game-modal h2 {
     }
 }
 
-
+@media screen and (min-width: 769px) {
+    .keyboard {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+    }
+    button {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    
+}
 
 
 
