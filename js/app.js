@@ -1,17 +1,15 @@
 
 
-
-const hangmanImage = document.querySelector(".hangman-box img");
-const wordDisplay = document.querySelector(".word-display");
-const lettersGuess= document.querySelector(".letters-guess");
-const keyboardDiv = document.querySelector(".keyboard");
-const gameModal = document.querySelector(".game-modal");
-
 // Audio elements for sound effects
 const correctSound = new Audio("sounds/correct.mp3");
 const wrongSound = new Audio("sounds/wrong.mp3");
 const winSound = new Audio("sounds/win.mp3");
 const loseSound = new Audio("sounds/lose.mp3");
+const hangmanImage = document.querySelector(".hangman-box img");
+const wordDisplay = document.querySelector(".word-display");
+const lettersGuess= document.querySelector(".letters-guess");
+const keyboardDiv = document.querySelector(".keyboard");
+const gameModal = document.querySelector(".game-modal");
 
 
 let currentWord, correctLetters = [], wrongGuessCount = 0, isVictory = false
@@ -87,6 +85,8 @@ const initGame = (button, clickedLetter) => {
     }
    
 }
+
+
 
 // Creating keyboard buttons and adding event listeners
 for (let i = 97; i <= 122; i++) {
