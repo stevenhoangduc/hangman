@@ -20,19 +20,18 @@ const getRandomWord = () => {
   
 }
 
-const gameOver = (isVictory) => {
+const gameOver = () => {
     setTimeout(() => {
        const modalTitle = gameModal.querySelector(".result-title");
        const modalMessage = gameModal.querySelector(".result-message b");
        const resultGif = gameModal.querySelector(".result-gif");
        
-       if (isVictory === "win") {
-    
-        modalTitle.innerText = "You win!";
-        resultGif.src = "images/win.gif";
+        if (isVictory === true) {
+            modalTitle.innerText = "You win!";
+            resultGif.src = "images/win.gif";
        }else {
-        modalTitle.innerText = "You lose!"
-        resultGif.src = "images/lost.gif";
+            modalTitle.innerText = "You lose!"
+            resultGif.src = "images/lost.gif";
        }
 
        modalMessage.innerText = currentWord;
@@ -65,9 +64,10 @@ const initGame = (button, clickedLetter) => {
     lettersGuess.innerText = `${wrongGuessCount} / ${maxGuesses}`;
 
     // Calling gameOver functin if any of these conditions meets
-    if(wrongGuessCount === maxGuesses) return gameOver(false);
+    if(wrongGuessCount === maxGuesses) return gameOver();
     if(correctLetters.length === currentWord.length) {
-        return gameOver("true");
+        isVictory = true
+        gameOver();
     }
    
 }

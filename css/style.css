@@ -15,7 +15,8 @@ body {
 
 .container {
    
-    width: 850px;
+    max-width: 850px;
+    
     background: rgb(209, 240, 191);
     display: flex;
     gap: 70px;
@@ -102,6 +103,7 @@ body {
     margin-top: 40px;
     gap: 3px;
     flex-wrap: wrap;
+ 
     justify-content: center;
 
 }
@@ -121,6 +123,7 @@ body {
 .keyboard button {
     padding: 7px;
     width: calc(100% / 9 - 5px);
+   
 }
 
 .keyboard button[disabled] {
@@ -215,9 +218,10 @@ game-modal h2 {
         grid-template-columns: repeat(12, 1fr);
         gap: 10px;
     }
-    button {
+    .keyboard button {
         font-size: 1.2rem;
         padding: 10px;
+        width: auto;
     }
     
 }
