@@ -8,9 +8,7 @@
     <script src="./js/word-list.js" defer></script>
     <script src="./js/app.js" defer></script> 
    
-
-    
-   </head>
+    </head>
 <body>
     <div class="game-modal">
         <div class="content">
@@ -19,28 +17,38 @@
             <p class="result-message">The correct word was: <b></b></p>
             <button onclick="location.reload()">New Game</button>
         </div>
-      
-      
-
     </div>
-    <div class="container"> 
-        <div class="hangman-box"> 
-            <img src="images/hangman-0.svg" alt="hangman-img"> 
-            <h1>Old School Hangman Game</h1>
-        </div>
-        <div class="game-box"> 
-            <ul class="word-display"></ul>
-            <h2 class="hint-text">
-                Hint: 
-                <b>hint hint</b>
-            </h2>
+
+    <!-- Main Game Container -->
+    <div class="game-container"> 
+        <!-- Wrong Guesses at the Top -->
+        <div class="wrong-guesses-container">
             <h2>
                 Wrong guesses: 
                 <p class="letters-guess"> 0 / 6 </p>
             </h2>
+        </div>
+            
+             <!-- Hint Below Wrong Guesses -->
+             <div class="game-box"> 
+                <ul class="word-display"></ul>
+                <h2 class="hint-text">
+                    Hint: 
+                    <b>hint hint</b>
+                </h2>
+                <h2>
+            </div>
+
+            <!-- Hangman Image in the Center -->
+        <div class="hangman-box">
+            <img src="images/hangman-0.svg" alt="Hangman Image">
+            <h1>Old School Hangman Game</h1>
+
+        </div>
+
+            <!-- Keyboard at the bottom -->
             <div class="keyboard"></div>
         </div>
 
-       
 </body>
 </html>
