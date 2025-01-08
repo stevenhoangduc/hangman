@@ -29,7 +29,7 @@ const wordList = [
     },
     {
         word: "school",
-        hint: "A place with lots of trees and wildlife."
+        hint: "A place where you go to learn new things."
     },
     {
         word: "clock",

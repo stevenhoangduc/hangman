@@ -16,7 +16,8 @@ const getRandomWord = () => {
     currentWord = word;
     console.log(word);
     document.querySelector(".hint-text b").innerText = hint;
-    wordDisplay.innerHTML = word.split("").map(() => `<li class="letter"></li>`).join("");
+    wordDisplay.innerHTML = word.split("").map(() => `<li class="letter">_</li>`).join("");
+  
 }
 
 const gameOver = (isVictory) => {
@@ -45,18 +46,18 @@ const initGame = (button, clickedLetter) => {
     if(currentWord.includes(clickedLetter)) {
         // Showing correct letter in word display
         [...currentWord].forEach((letter, index) => {
+            const letterElement = wordDisplay.querySelectorAll("li")[index];
             if(letter === clickedLetter) {
                 correctLetters.push(letter);
-                wordDisplay.querySelectorAll("li")[index].innerText = letter;
-                wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
+                letterElement.innerText = letter;
+                letterElement.classList.add("guessed");
+
+            }else {
+
             }
-        })
+        });
     }else {
-        // If clicked letter doesn't exist then update the wrongGuessCount and hangman image
-        if (wrongGuessCount >= 6 ) {
-            
-            return gameOver("lose")
-        } 
+       
         wrongGuessCount++;
         hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
     }
@@ -65,7 +66,9 @@ const initGame = (button, clickedLetter) => {
 
     // Calling gameOver functin if any of these conditions meets
     if(wrongGuessCount === maxGuesses) return gameOver(false);
-    if(correctLetters.length === currentWord.length) return gameOver(true);
+    if(correctLetters.length === currentWord.length) {
+        return gameOver("true");
+    }
    
 }
 

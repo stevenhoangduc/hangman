@@ -39,6 +39,8 @@ body {
 }
 
 .word-display { 
+    padding: 0;
+    list-style: none;
     display: flex;
     gap: 10px;
     list-style: none;
@@ -60,7 +62,7 @@ body {
 }
 
 .word-display .letter.guessed {
-    border-color: transparent;
+   
     margin: -40px 0 35px;
 }
 
@@ -75,8 +77,24 @@ body {
     font-weight: 600;
 }
 
+.letter {
+    display: inline-block;
+    width: 30px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 24px;
+    /* color: transparent; */
+}
+
 .letters-guess b {
     color: red;
+}
+
+.letter.guessed {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #333;
 }
 
 .keyboard {
