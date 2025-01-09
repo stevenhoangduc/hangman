@@ -45,21 +45,25 @@ body {
     max-width: 100%;
     height: auto;
     align-items: center;
-    color: red;
+    color: rgb(52, 49, 206);
    
 }
 
 .hangman-box img {
    max-width: 100%;
    height: auto;
-
+  
 }
 
 .hangman-box h1 {
-    font-size: 1.45rem;
+    font-size: 2rem;
     margin-top: 20px;
     text-align: center;
     text-transform: uppercase;
+    color: red;
+    
+
+   
 
 }
 
@@ -148,7 +152,7 @@ body {
     padding: 10px 15px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 1px solid #ccc;
+    border: 1px solid #319e64;
     border-radius: 5px;
     background-color: #f9f9f9;
     cursor: pointer;
@@ -169,7 +173,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     border-radius: 4px;
-    background: rgb(217, 39, 39);
+    background: rgb(192, 138, 2);
     font-size: 1rem;
     font-weight: 600;
     color: rgb(246, 237, 237);
@@ -209,7 +213,7 @@ body {
     padding: 20px;
     transition: opacity 0.4s ease;
     opacity: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(184, 133, 133, 0.2);
     z-index: 1000;
     left: 50;
     top: 50; 
