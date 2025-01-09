@@ -18,7 +18,7 @@ The game is responsive to different window sizes, built with HTML, CSS, and java
 
 #### User stories
 
-\As a user I should be able to enter my own letters.\
+As a user I should be able to enter my own letters.\
 As a user I should be able to see all the available alphabet letters.\
 As a user I should see the letters guess change so I know what was guesses and left to guess.\
 As a user I should start the game with 6 lives.\

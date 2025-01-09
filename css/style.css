@@ -272,7 +272,8 @@ game-modal h2 {
         max-width: 200px;
     }
     .hangman-box h1 {
-       
+        display: flex;
+        color: rgb(193, 177, 6);
     }
 }
 
