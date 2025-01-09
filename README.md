@@ -45,8 +45,9 @@ Online Searches\
 Stack Overflow\
 Python Forum.
 
-Demo
-here is a live working demo: 
+Demo\
+here is a live working demo: https://stevenhoangduc.github.io/hangman/
+
 
 License
 Distributed under the MIT License.  See LICENSE for more information.
