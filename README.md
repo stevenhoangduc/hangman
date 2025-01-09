@@ -21,7 +21,6 @@ The game is responsive to different window sizes, built with HTML, CSS, and java
 \As a user I should be able to enter my own letters.\
 As a user I should be able to see all the available alphabet letters.\
 As a user I should see the letters guess change so I know what was guesses and left to guess.\
-As a user I can click a button and generate a word for me to guess.\
 As a user I should start the game with 6 lives.\
 As a user I want to view the website and content clearly on any device.\
 As a user I want to have instructions on how to play the game so that I can easily understand the rules.\
@@ -40,11 +39,14 @@ In the future, I plan to enhance the project by introducing a timer to increase 
 
 To further improve the visual appeal and interactivity, I will incorporate a broader range of colors and animations. These enhancements will make the interface more vibrant, dynamic, and engaging, creating a more immersive and enjoyable experience for the players. 
 
-Rescources and Learning Process:
-Chat Gpt,
-Online Searches,
-Stack Overflow,
-Python Forum.
+\Rescources and Learning Process:\
+Chat Gpt\
+Online Searches\
+Stack Overflow\
+Python Forum.\
+
+Demo
+here is a live working demo: 
 
 License
 Distributed under the MIT License.  See LICENSE for more information.
