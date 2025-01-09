@@ -56,15 +56,11 @@ body {
 }
 
 .hangman-box h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 20px;
     text-align: center;
     text-transform: uppercase;
     color: red;
-    
-
-   
-
 }
 
 .word-display { 
@@ -75,8 +71,6 @@ body {
     list-style: none;
     align-items: center;
     justify-content: center;
-   
-   
 }
 
 .word-display .letter {
@@ -87,7 +81,6 @@ body {
     font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
-  
 }
 
 .word-display .letter.guessed {
@@ -112,8 +105,6 @@ body {
 
 .hint-text h2 b {
     font-weight: 600;
-    
-    
 }
 
 .letter {
@@ -184,14 +175,13 @@ body {
 .keyboard button {
     padding: 7px;
     width: calc(100% / 9 - 5px);
-   
 }
 
 .keyboard button[disabled] {
     opacity: 0.7;
     pointer-events: none;
-
 }
+
 :where(.game-modal, .keyboard) button:hover {
     background: white;
 }
@@ -201,7 +191,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .game-modal {
@@ -224,9 +213,6 @@ body {
     align-items: center;
     justify-content: center;
     align-content: center;
-  
-    
-
 }
 .game-modal.show {
     opacity: 1;
@@ -236,8 +222,8 @@ body {
     justify-content: center;
     align-content: center;
     background-color: #000;
-   
 }
+
 .game-modal .content {
     text-align: center;
     border-radius: 10px;
@@ -245,7 +231,6 @@ body {
     background: white;
     max-width: 420px;
     width: 100%;
-  
 }
 
 .game-modal img {
@@ -302,7 +287,6 @@ game-modal h2 {
         padding: 10px;
         width: auto;
     }
-    
 }
 
 .hidden-word-text {
