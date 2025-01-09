@@ -28,6 +28,7 @@ body {
     font-size: 1rem;
     margin-bottom: 20px;
     text-align: center;
+  
 }
 
 .container {
@@ -38,6 +39,7 @@ body {
     align-items: flex-end;
     padding: 60px 40px;
     border-radius: 10px;
+   
 }
 
 
@@ -52,6 +54,7 @@ body {
 .hangman-box img {
    max-width: 100%;
    height: auto;
+   
   
 }
 
@@ -61,6 +64,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: red;
+    
 }
 
 .word-display { 
@@ -84,8 +88,8 @@ body {
 }
 
 .word-display .letter.guessed {
-   
     margin: -40px 0 35px;
+   
 }
 
 .hint-text h2 {
@@ -93,6 +97,7 @@ body {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 15px;
+   
     
 }
 
@@ -101,10 +106,12 @@ body {
     font-weight: bold;
     font-size: 1.2rem;
     text-align: center;
+   
 }
 
 .hint-text h2 b {
     font-weight: 600;
+   
 }
 
 .letter {
