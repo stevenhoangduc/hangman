@@ -2,7 +2,7 @@
 body {
     margin: 0;
     flex-direction: column;
-    background-image: url("/images/background.gif");
+    background-image: url("./images/background.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
