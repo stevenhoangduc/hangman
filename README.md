@@ -39,11 +39,11 @@ In the future, I plan to enhance the project by introducing a timer to increase 
 
 To further improve the visual appeal and interactivity, I will incorporate a broader range of colors and animations. These enhancements will make the interface more vibrant, dynamic, and engaging, creating a more immersive and enjoyable experience for the players. 
 
-\Rescources and Learning Process:\
+Rescources and Learning Process:\
 Chat Gpt\
 Online Searches\
 Stack Overflow\
-Python Forum.\
+Python Forum.
 
 Demo
 here is a live working demo: 
