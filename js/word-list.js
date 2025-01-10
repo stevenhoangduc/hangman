@@ -91,4 +91,156 @@ const wordList = [
         hint: "A colorful plant blooms in spring."
     },
     
-]
+    { 
+        word: "javascript", 
+        hint: "A popular programming language for web development" 
+    },
+    { 
+        word: "hangman", 
+        hint: "A classic word-guessing game" 
+
+    },
+    { 
+        word: "elephant", 
+        hint: "The largest land animal" 
+    },
+    { 
+        word: "volcano", 
+        hint: "A mountain that erupts with lava" 
+    },
+    { 
+        word: "galaxy", 
+        hint: "A large system of stars, gas, and dust in space" 
+    },     
+    { 
+        word: "rainbow", 
+        hint: "A colorful arc seen after rain" 
+    },
+    { 
+        word: "dictionary", 
+        hint: "A book that defines words" 
+    },
+    { 
+        word: "hurricane", 
+        hint: "A strong tropical storm with high winds" 
+    },
+    { 
+        word: "microscope", 
+        hint: "An instrument used to see small objects" 
+    },
+    { 
+        word: "penguin", 
+        hint: "A flightless bird found in Antarctica" 
+    },
+    { 
+        word: "lighthouse", 
+        hint: "A tower with a light to guide ships" 
+    },
+    { 
+        word: "strawberry", 
+        hint: "A sweet red fruit with seeds on the outside" 
+    },
+    { 
+        word: "caterpillar", 
+        hint: "An insect that turns into a butterfly" 
+    },
+    { 
+        word: "notebook", 
+        hint: "A small book used for writing notes" 
+    },
+    { 
+        word: "refrigerator", 
+        hint: "An appliance used to keep food cold" 
+    },
+    { 
+        word: "mountain", 
+        hint: "A large natural elevation of Earth's surface" 
+    },
+    { 
+        word: "universe", 
+        hint: "Everything that exists in space" 
+    },
+    { 
+        word: "telescope", 
+        hint: "A tool for viewing distant objects in space" 
+    },
+    { 
+        word: "jigsaw", 
+        hint: "A puzzle with interlocking pieces" 
+    },
+    {
+        word: "elephant", 
+        hint: "The largest land animal" 
+    },
+    { 
+        word: "volcano", 
+        hint: "A mountain that erupts with lava" 
+    },
+    { 
+        word: "galaxy", 
+        hint: "A large system of stars, gas, and dust in space" 
+    },
+    { 
+        word: "pyramid", 
+        hint: "A triangular structure built in ancient Egypt" 
+    },
+    { 
+        word: "rainbow", 
+        hint: "A colorful arc seen after rain" 
+    },
+    { 
+        word: "dictionary", 
+        hint: "A book that defines words" 
+    },
+    { 
+        word: "hurricane", 
+        hint: "A strong tropical storm with high winds" 
+    },
+    { 
+        word: "microscope", 
+        hint: "An instrument used to see small objects" 
+    },
+    { 
+        word: "penguin", 
+        hint: "A flightless bird found in Antarctica" 
+    },
+    { 
+        word: "lighthouse", 
+        hint: "A tower with a light to guide ships" 
+    },
+    { 
+        word: "strawberry", 
+        hint: "A sweet red fruit with seeds on the outside" 
+    },
+    { 
+        word: "caterpillar", 
+        hint: "An insect that turns into a butterfly" 
+    },
+    { 
+        word: "notebook", 
+        hint: "A small book used for writing notes" 
+    },
+    { 
+        word: "refrigerator", 
+        hint: "An appliance used to keep food cold" 
+    },
+    { 
+        word: "mountain", 
+        hint: "A large natural elevation of Earth's surface" 
+    },
+    { 
+        word: "universe", 
+        hint: "Everything that exists in space" 
+    },
+    { 
+        word: "telescope", 
+        hint: "A tool for viewing distant objects in space" 
+    },
+    { 
+        word: "jigsaw", 
+        hint: "A puzzle with interlocking pieces" 
+    }
+    
+    
+    
+];
