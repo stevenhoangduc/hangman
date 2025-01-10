@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Old School Hangman Game</title>
+
+    // Stylesheet
     <link rel="stylesheet" href="./css/style.css" />
+
+    // JavaScript Files
     <script src="./js/word-list.js" defer></script>
     <script src="./js/app.js" defer></script> 
-    
-   
-    </head>
+</head>
 <body>
+
+    // Modal for Game Result 
     <div class="game-modal">
         <div class="content">
            <img src="images/lost.gif" alt="Game Result" class="result-gif">
@@ -22,7 +26,8 @@
 
     <!-- Main Game Container -->
     <div class="game-container"> 
-        <!-- Wrong Guesses at the Top -->
+
+        <!-- Wrong Guesses Display (at the Top)-->
         <div class="wrong-guesses-container">
             <h2>
                 Wrong guesses: 
@@ -30,24 +35,22 @@
             </h2>
         </div>
             
-             <!-- Hint Below Wrong Guesses -->
+             <!-- Game Box for Word and Hint (Below Wrong Guesses) -->
              <div class="game-box"> 
                 <ul class="word-display"></ul>
                 <h2 class="hint-text">
-                    Hint: 
-                    <b>hint hint</b>
+                    Hint: <b>hint hint</b>
                 </h2>
-                <h2>
             </div>
 
-            <!-- Hangman Image in the Center -->
+            <!-- Hangman Image and Title (in the Center) -->
         <div class="hangman-box">
             <img src="images/hangman-0.svg" alt="Hangman Image">
             <h1>Old School Hangman Game</h1>
         </div>
 
 
-            <!-- Keyboard at the bottom -->
+            <!-- On-Screen Keyboard (at the bottom) -->
             <div class="keyboard"></div>
         </div>
 

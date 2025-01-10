@@ -1,38 +1,50 @@
 
 
 // Audio elements for sound effects
-const correctSound = new Audio("sounds/correct.mp3");
-const wrongSound = new Audio("sounds/wrong.mp3");
+const correctSound = new Audio("sounds/correctsound.mp3");
+const wrongSound = new Audio("sounds/wrongsound.mp3");
 const winSound = new Audio("sounds/win.mp3");
 const loseSound = new Audio("sounds/lose.mp3");
+
+// Dom elements
 const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
 const lettersGuess= document.querySelector(".letters-guess");
 const keyboardDiv = document.querySelector(".keyboard");
 const gameModal = document.querySelector(".game-modal");
 
-
-let currentWord, correctLetters = [], wrongGuessCount = 0, isVictory = false
+// Game variables
+let currentWord; 
+correctLetters = []; 
+wrongGuessCount = 0; 
+isVictory = false;
 const maxGuesses = 6;
 
-// Function to get a random word from the word lis
+// Function to get a random word and hint from the word list
 const getRandomWord = () => {
     // Selecting a random word and hint from the wordList
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
-    currentWord = word;
-    console.log(word);
-    document.querySelector(".hint-text b").innerText = hint;
-    wordDisplay.innerHTML = word.split("").map(() => `<li class="letter">_</li>`).join("");
-  
-}
+    currentWord = word; // Store the selected word
+    console.log(word); // Log the word for debugging
 
-// Function to handle game over
+    // Update the hint text
+    document.querySelector(".hint-text b").innerText = hint;
+
+    // Create blank spaces for each letter in the word
+    wordDisplay.innerHTML = word
+        .split("") // Split the word into letters
+        .map(() => `<li class="letter">_</li>`) // Create underscores for each letter
+        .join(""); // Combine the underscores into a string
+};
+
+// Function to handle the end of teh game
 const gameOver = () => {
     setTimeout(() => {
        const modalTitle = gameModal.querySelector(".result-title");
        const modalMessage = gameModal.querySelector(".result-message b");
        const resultGif = gameModal.querySelector(".result-gif");
        
+       // Check if the player won or lost
         if (isVictory === true) {
             modalTitle.innerText = "You win!";
             resultGif.src = "images/win.gif";
@@ -43,13 +55,13 @@ const gameOver = () => {
             loseSound.play(); // Play lose sound
        }
 
-       modalMessage.innerText = currentWord;
+       // Show the correct word and the game modal
+        modalMessage.innerText = currentWord;
         gameModal.classList.add("show");
+    }, 0.3); // Delay 0.3s for a smooth transition
+};
 
-    }, 0.3);
-}
-
-// Function to intitialize the game for a guess
+// Function to handle a guessed letter
 const initGame = (button, clickedLetter) => {
     if(currentWord.includes(clickedLetter)) {
         // Play correct sound
@@ -62,25 +74,27 @@ const initGame = (button, clickedLetter) => {
                 correctLetters.push(letter);
                 letterElement.innerText = letter;
                 letterElement.classList.add("guessed");
-
             }
         });
     }else {
-        // Play wrong sound
-        wrongSound.play;
+        // Play the wrong sound
+        wrongSound.play();
 
+        // Increment the wrong guess count and update the hangman image
         wrongGuessCount++;
         hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
     }
 
-    // Disable the button
+    // Disable the clicked button
     button.disabled = true;
+
+    // Update the wrong guess counter
     lettersGuess.innerText = `${wrongGuessCount} / ${maxGuesses}`;
 
     // Check if the game Over 
-    if(wrongGuessCount === maxGuesses) return gameOver();
+    if(wrongGuessCount === maxGuesses) return gameOver(); // Player loses
     if(correctLetters.length === currentWord.length) {
-        isVictory = true
+        isVictory = true; // Player wins
         gameOver();
     }
    
@@ -88,13 +102,15 @@ const initGame = (button, clickedLetter) => {
 
 
 
-// Creating keyboard buttons and adding event listeners
+// Creating on-screen keyboard buttons
 for (let i = 97; i <= 122; i++) {
-    const button = document.createElement("button");
-    button.innerText = String.fromCharCode(i);
-    keyboardDiv.appendChild(button);
+    const button = document.createElement("button"); // Create a button for each letter
+    button.innerText = String.fromCharCode(i); // Set the letter as the button text
+    keyboardDiv.appendChild(button); // Add the button to the keyboard container
+
+    // Add a click event listener for each button
     button.addEventListener("click", e => initGame(e.target, String.fromCharCode(i)));
 }
 
-
+// Start the game by selecting a random word
 getRandomWord()
